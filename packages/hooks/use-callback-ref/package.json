@@ -1,0 +1,48 @@
+{
+  "name": "@dafunda-ui/react-use-callback-ref",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [
+    "use-callback-ref",
+    "hooks",
+    "react",
+    "ui",
+    "tailwindcss",
+    "dafunda-ui"
+  ],
+  "author": "Dafunda Dev Team <dev@dafunda.io>",
+  "homepage": "https://github.com/dafundacom/dafunda-ui#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dafundacom/dafunda-ui.git",
+    "directory": "packages/hooks/react-use-callback-ref"
+  },
+  "bugs": {
+    "url": "https://github.com/dafundacom/dafunda-ui/issues"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format=esm,cjs --dts",
+    "dev": "pnpm build:fast -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src/index.ts --format=esm,cjs",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "devDependencies": {
+    "react": "^18.2.0",
+    "clean-package": "2.2.0"
+  }
+}
